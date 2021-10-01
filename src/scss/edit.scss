@@ -1,0 +1,89 @@
+@import "./variables.scss";
+
+
+.project-grid {
+    display: flex;
+    grid-column-gap: 15px;
+}
+
+.project {
+    max-width: 150px;
+
+    & img {
+        width: 100%;
+        border-radius: 5px;
+        box-shadow: $shadow;
+    }
+
+    & h3 {
+        font-size: 1vw;
+        margin: 0;
+        margin-top: .5em;
+    }
+
+    & p {
+        font-size: .65em;
+        margin: 0;
+    }
+}
+
+.default-form {
+    margin-top: 30px;
+    max-width: 600px;
+    & div{
+        width: 100%;
+    }
+    &:last-child {
+        margin-bottom: 0 !important;
+    }
+}
+
+.default-input {
+    padding: 3px 7px;
+    font-size: 17px;
+    font-family: $font-lato;
+    box-shadow: $shadow-3;
+    margin-bottom: .7em;
+    width: 100%;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.default-text-area {
+    padding: 3px 7px;
+    font-size: 17px;
+    font-family: $font-lato;
+    box-shadow: $shadow-3;
+    resize: none !important;
+    width: 100%;
+    margin-bottom: .7em;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.add-button {
+    background-color: #fff;
+    border: 1px solid $clr-txt-800;
+    color: $clr-txt-400;
+    border-radius: 2px;
+    font-size: 15px;
+    padding: 3px 6px;
+    margin-top: 3px;
+    min-width: 25%;
+
+    & ion-icon {
+        vertical-align: middle;
+    }
+}
+
+.input-disable {
+    pointer-events: none;
+    border: none;
+    border-bottom: 1px solid grey;
+    background-color: transparent;
+    margin: 5px 0;
+}

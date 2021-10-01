@@ -1,0 +1,75 @@
+@import './variables.scss';
+
+.login {
+    width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: $shadow-4;
+    border-radius: 1.5em;
+    min-height: 300px;
+    margin-top: 100px;
+    display: block;
+    & form {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.pb-2 {
+    padding-bottom: 2em;
+}
+
+.login-form {
+    padding: 0 15%;
+    & * {
+        font-family: $font-opensans;
+    }
+}
+
+.login-para {
+    width: 100%;
+    display: block;
+    margin-bottom: 1em;
+    font-family: $font-opensans;
+
+    &:first-child {
+        padding-top: 50px;
+    }
+}
+
+.login-label {
+    color: $clr-txt-100;
+}
+
+.login-input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 7px 12px;
+    font-size: .95em;
+    background-color: #fff;
+    border-radius: .4em;
+    border: 1px solid #d2d6da;
+    margin-top: .3em;
+}
+
+.brand {
+    width: 100%;
+    padding-top: 2em;
+
+    & h3 {
+        font-family: $font-opensans;
+        text-align: center;
+        font-size: 1.4em;
+    }
+}
+
+.brand-logo {
+    width: fit-content;
+    margin: 0 auto;
+
+    & img {
+        width: 50px;
+        max-height: 50px;
+    }
+}

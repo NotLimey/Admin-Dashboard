@@ -1,0 +1,200 @@
+@import "./variables.scss";
+
+$navbar-width: 17.5em;
+
+.wrapper {
+    display: flex;
+    position: relative;
+}
+
+.sidebar {
+    position: fixed;
+    width: $navbar-width;
+    height: 100vh;
+    padding: 30px 0;
+    & * {
+        text-decoration: none;
+    }
+}
+
+.nav-items {
+    font-family: $font-opensans;
+    padding: 0 15%;
+    list-style: none;
+    & .active {
+        background-color: #fff;
+        box-shadow: $shadow-4;
+        & a {
+            background-color: #fff;
+            color: #344767;
+            font-weight: 700;
+            & ion-icon {
+                background-color: #5cb85c7b;
+            }
+        }
+    }
+}
+
+.side-nav-item {
+    border-radius: 6px;
+}
+
+.main-content {
+    padding: 10px 20px;
+    margin-left: $navbar-width;
+}
+
+
+.side-nav-item {
+    & a {
+        -moz-osx-font-smoothing: grayscale;
+        align-items: center;
+        box-sizing: border-box;
+        color: #67748e;
+        cursor: pointer;
+        display: flex;
+        font-size: .875rem;
+        letter-spacing: -.025rem;
+        line-height: 25.6px;
+        margin: 0;
+        border-radius: 1em;
+        padding: .675rem 1rem;
+        text-align: left;
+        text-decoration: none currentcolor solid;
+        text-decoration-thickness: auto;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+        white-space: nowrap;
+    }
+
+    & ion-icon {
+        background-color: #fff;
+        box-shadow: $shadow-4;
+        padding: 10px;
+        border-radius: 7px;
+        margin-right: 5px;
+        font-size: 16px;
+    }
+}
+.nav-bar-brand {
+    margin: 0 15%;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(.25turn, #34476700, #34476725, #34476700);
+    border-image-slice: 1;
+    font-family: $font-lato;
+    font-size: 1.3em;
+    color: $clr-txt-50;
+}
+
+.nav-divider {
+    text-transform: uppercase;
+    font-family: $font-opensans;
+    font-size: .775em;
+    text-align: left;
+    padding: 0 16%;
+}
+
+.navbar {
+    margin-top: 25px;
+    border-radius: 1em;
+    width: 95%;
+    padding: 7px 15px;
+    display: flex;
+    justify-content: space-between;
+
+    & * {
+        margin: 0;
+    }
+}
+
+.navbar-current-page {
+    font-family: $font-opensans;
+    font-size: .875em;
+
+    & span {
+        color: $clr-txt-400;
+        font-weight: 300;
+    }
+    & .l-font {
+        font-size: 1.2em;
+    }
+}
+
+.search-setting-profile {
+    float: right;
+    display: flex;
+
+    & ul {
+        list-style-type: none;
+        margin-right: 1.5em !important;
+        & li {
+            padding: 0 .5em;
+            float: left;
+            & a {
+                -moz-osx-font-smoothing: grayscale;
+                box-sizing: border-box;
+                color: #67748e;
+                cursor: pointer;
+                display: block;
+                font-family: Open Sans;
+                font-size: .875rem;
+                font-weight: 600;
+                letter-spacing: -.025rem;
+                line-height: 22.4px;
+                padding: .5rem 0;
+                text-align: left;
+                text-decoration: none currentcolor solid;
+                text-decoration-thickness: auto;
+                transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+            }
+            & * {
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+.search-field {
+    display: flex;
+    & input {
+        -moz-osx-font-smoothing: grayscale;
+        align-items: center;
+        background-color: #fff;
+        border: 1px solid #d2d6da;
+        border-image: none 100% 1 0 stretch;
+        border-radius: .5rem 0 0 .5rem;
+        box-sizing: border-box;
+        color: #67748e;
+        display: flex;
+        font-size: .875rem;
+        font-weight: 400;
+        line-height: 1.4rem;
+        padding: .5rem .25rem;
+        text-align: center;
+        transition: box-shadow .15s, border-color .15s;
+        white-space: nowrap;
+        border-right: none;
+    }
+    & .search-btn {
+        background-color: #fff;
+        border: 1px solid #d2d6da;
+        border-left: none;
+        border-radius: 0 .5rem .5rem 0;
+        & ion-icon {
+            margin-right: 10px;
+            margin-left: 10px;
+            font-size: 1.3em;
+        }
+    }
+}
+
+
+
+.navbar-sticky {
+    position: sticky;
+    margin-top: 50px !important;
+    margin-bottom: -90px;
+    & * {
+        color: $clr-txt-100 !important;
+    }
+}

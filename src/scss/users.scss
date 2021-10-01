@@ -1,0 +1,168 @@
+@import './variables.scss';
+
+
+.user-table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.user-table div p, .user-table div div {
+    width: 100%;
+}
+
+.user-table-header {
+    background-color: $green-200;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    font-family: $font-opensans;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.no-td {
+    text-decoration: none;
+}
+
+.user-table-item {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    text-align: center;
+    color: $clr-txt-50;
+    font-weight: 400;
+    font-family: $font-opensans;
+    background-color: $bg-primary-2;
+    border-radius: 10px;
+    align-items: center;
+    & .image-cnt {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 40px;
+            height: 40px;
+            background-color: #999;
+            border: none;
+            border-radius: 100%;
+        }
+    }
+
+    & .verified-icon ion-icon {
+        font-size: 20px;
+    }
+}
+
+
+.user-information {
+    margin-top: 20px;
+}
+.user-info-image {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    & img {
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        object-fit: cover;
+        box-shadow: $shadow-4;
+        background-color: $bg-secondary;
+    }
+}
+.edit-user {
+    max-width: 800px;
+    margin: 40px auto;
+    & div {
+        margin: 20px 0;
+    }
+
+    & input {
+        width: 100%;
+        padding: 4px 12px;
+        border-radius: .3em;
+        border: 1px solid $clr-txt-800;
+        font-size: 1em;
+        font-family: $font-opensans;
+    }
+    & input[type=checkbox]{
+        height: 0;
+        width: 0;
+        visibility: hidden;
+    }
+
+    & label {
+        padding: 0 5px;
+        font-family: $font-opensans;
+        color: $clr-txt-100;
+    }
+    & .role__verified {
+        display: flex;
+    }
+    & .role-div {
+        margin: 0 auto;
+        width: fit-content;
+        text-align: center;
+        & select {
+            margin-top: 10px;
+            font-family: $font-opensans;
+            background-color: transparent;
+            border: 1px solid $clr-txt-800;
+            border-radius: .2em;
+            padding: 2px;
+            font-size: .875em;
+        }
+    }
+    & .user-verified {
+        width: fit-content;
+        margin: 0 auto;
+    }
+    & .switch {
+        margin: 0 auto;
+        margin-top: -10px;
+        width: fit-content;
+        & label {
+            display: block;
+            width: 65px;
+            height: 30px;
+            background-color: #d9534f;
+            border-radius: 100px;
+            position: relative;
+            cursor: pointer;
+            transition: 0.5s;
+            box-shadow: 0 0 20px #477a8550;
+            &::after {
+                content: "";
+                width: 24px;
+                height: 24px;
+                background-color: #eeeeee;
+                position: absolute;
+                border-radius: 70px;
+                top: 3px;
+                left: 4px;
+                transition: 0.5s; 
+            }
+            
+        }
+        & input:checked + label:after {
+            left: calc(100% - 4px);
+            transform: translateX(-100%);
+        }
+        & input:checked + label {
+            background-color: $green-100;
+        }
+    }
+}
+
+.back-arrow {
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: -30px;
+    & ion-icon {
+        font-size: 30px;
+        color: #000;
+    }
+}
